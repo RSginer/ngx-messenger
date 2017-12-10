@@ -2,14 +2,10 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'msg-chat-box',
-  styles: [`
+  styleUrls: [`
 
   `],
-  template: `
-      <div>
-        <h1>Chatbox</h1>
-      </div>
-  `
+  templateUrl: 'messenger-chat-box.component.html'
 })
 export class MessengerChatBoxComponent {
 
