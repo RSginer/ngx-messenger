@@ -1,7 +1,13 @@
-import { Component, Input } from '@angular/core';
+import {
+    Component,
+    Input,
+    OnInit,
+    EventEmitter,
+    ViewChild,
+    Output,
+    ElementRef } from '@angular/core';
 import { MessageChat } from './message-chat.interface';
-import { EventEmitter } from '@angular/core';
-import { Output } from '@angular/core';
+
 
 @Component({
   selector: 'msg-chat-box',
@@ -12,7 +18,7 @@ import { Output } from '@angular/core';
       <span class="fa fa-commenting-o"></span> Chat
   </div>
 
-  <div class="card-body" contentResize>
+  <div class="card-body" #scrollMe [scrollTop]="scrollHeight" contentResize>
       <ul class="chat" *ngFor="let message of conversation">
          <msg-message
          [position]="currentUserId !== message?.user?.id ? 'left' : 'right'"
@@ -32,17 +38,28 @@ import { Output } from '@angular/core';
   </div>
   `
 })
-export class MessengerChatBoxComponent {
+export class MessengerChatBoxComponent implements OnInit {
+  @ViewChild('scrollMe') container: ElementRef;
+  @ViewChild('messageInput') messageInput: ElementRef;
+
   @Input() currentUserId = 1;
-  @Output() onSend = new EventEmitter();
   @Input() conversation: MessageChat[];
 
+  @Output() onSend = new EventEmitter();
+
+  scrollHeight;
 
   constructor() {
   }
 
   emitMessage(text) {
     this.onSend.next(text);
+    this.messageInput.nativeElement.value = '';
+    this.scrollHeight = this.container.nativeElement.scrollHeight;
+  }
+
+  ngOnInit() {
+    this.scrollHeight = this.container.nativeElement.scrollHeight;
   }
 
 }
