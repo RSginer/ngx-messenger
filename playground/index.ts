@@ -11,6 +11,7 @@ import { MessengerModule }  from 'ngx-messenger';
 @Component({
   selector: 'app',
   template: `<msg-chat-box
+              (onSend)="sendMessage($event)"
               [conversation]="conversation"
               [currentUserId]="currentUserId">
               </msg-chat-box>`
@@ -73,6 +74,18 @@ class AppComponent {
       }
     }
   ]
+
+  sendMessage(text) {
+    this.conversation.push({
+      text: text,
+      date: new Date(),
+      user: {
+        id: this.currentUserId,
+        imageUrl: 'http://via.placeholder.com/100x100',
+        name: 'Ruben'
+      }
+    })
+  }
 }
 
 @NgModule({

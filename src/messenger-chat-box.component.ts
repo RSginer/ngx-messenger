@@ -1,5 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { MessageChat } from './message-chat.interface';
+import { EventEmitter } from '@angular/core';
+import { Output } from '@angular/core';
 
 @Component({
   selector: 'msg-chat-box',
@@ -32,7 +34,7 @@ import { MessageChat } from './message-chat.interface';
 })
 export class MessengerChatBoxComponent {
   @Input() currentUserId = 1;
-
+  @Output() onSend = new EventEmitter();
   @Input() conversation: MessageChat[];
 
 
@@ -40,7 +42,7 @@ export class MessengerChatBoxComponent {
   }
 
   emitMessage(text) {
-    console.log(text);
+    this.onSend.next(text);
   }
-  
+
 }
