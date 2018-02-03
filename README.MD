@@ -38,7 +38,7 @@ export class AppModule { }
 Once MessengerModule is imported, you can use its components, directives and pipes in your Angular application:
 
 ```xml
-<!-- You can now use your library component in app.component.html -->
+<!-- You can now use ngx-messenger components in app.component.html -->
 <h1>
   {{title}}
 </h1>
