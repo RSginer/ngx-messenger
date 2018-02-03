@@ -24,8 +24,8 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
-// Import your library
-import { SampleModule } from 'ngx-messenger';
+// Import MessengerModule
+import { MessengerModule } from 'ngx-messenger';
 
 @NgModule({
   declarations: [
@@ -34,8 +34,8 @@ import { SampleModule } from 'ngx-messenger';
   imports: [
     BrowserModule,
 
-    // Specify your library as an import
-    LibraryModule
+    // Specify MessengerModule as an import
+    MessengerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
@@ -43,14 +43,14 @@ import { SampleModule } from 'ngx-messenger';
 export class AppModule { }
 ```
 
-Once your library is imported, you can use its components, directives and pipes in your Angular application:
+Once MessengerModule is imported, you can use its components, directives and pipes in your Angular application:
 
 ```xml
 <!-- You can now use your library component in app.component.html -->
 <h1>
   {{title}}
 </h1>
-<sampleComponent></sampleComponent>
+<msg-chat-box></msg-chat-box>
 ```
 
 ## Development
