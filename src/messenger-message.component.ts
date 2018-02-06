@@ -1,6 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { MessageChat } from './message-chat.interface';
 
+import * as moment from 'moment';
+
 @Component({
     selector: 'msg-message',
     styleUrls: ['messenger-message.component.css'],
@@ -20,7 +22,7 @@ import { MessageChat } from './message-chat.interface';
                 [class.float-left]="position === 'right'"
                 [class.float-right]="position === 'left'"
                 class="text-muted">
-                    <span class="fa fa-clock-o"></span>12 mins ago</small>
+                    <span class="fa fa-clock-o"></span>{{moment(message.date).fromNow()}}</small>
             </div>
             <p [class.right]="position === 'right'">
             {{message?.text}}
@@ -32,6 +34,7 @@ export class MessengerMessageComponent implements OnInit {
 
     @Input() message: MessageChat;
     @Input() position: 'left' | 'right' = 'right';
+    moment = moment;
 
     constructor() { }
 

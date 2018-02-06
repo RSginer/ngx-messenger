@@ -8,7 +8,6 @@ import {
     ElementRef } from '@angular/core';
 import { MessageChat } from './message-chat.interface';
 
-
 @Component({
   selector: 'msg-chat-box',
   styleUrls: [`messenger-chat-box.component.css`],
