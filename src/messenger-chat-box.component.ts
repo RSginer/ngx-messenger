@@ -5,7 +5,9 @@ import {
     EventEmitter,
     ViewChild,
     Output,
-    ElementRef } from '@angular/core';
+    ElementRef
+} from '@angular/core';
+
 import { MessageChat } from './message-chat.interface';
 
 @Component({
@@ -13,20 +15,25 @@ import { MessageChat } from './message-chat.interface';
   styleUrls: [`messenger-chat-box.component.css`],
   template: `
   <div class="card">
-  <div class="card-heading" id="accordion">
+  <div class="card-heading" #topBar id="accordion">
       <span class="fa fa-commenting-o"></span> Chat
   </div>
 
-  <div class="card-body" #scrollMe [scrollTop]="scrollHeight" contentResize>
+  <div class="card-body"
+   #container
+   [scrollTop]="scrollHeight"
+   [contentResize]="isFullScreen"
+   [topBarHeight]="topBar.offsetHeight"
+   [bottomBarHeight]="bottomBar.offsetHeight" >
       <ul class="chat" *ngFor="let message of conversation">
          <msg-message
          [position]="currentUserId !== message?.user?.id ? 'left' : 'right'"
          [message]="message"
          ></msg-message>
       </ul>
-
   </div>
-  <div class="card-footer">
+
+  <div class="card-footer" #bottomBar>
       <div class="input-group">
           <input #messageInput id="btn-input" type="text" class="form-control input-sm" placeholder="Type your message here..." />
           <span class="input-group-btn">
@@ -38,11 +45,13 @@ import { MessageChat } from './message-chat.interface';
   `
 })
 export class MessengerChatBoxComponent implements OnInit {
-  @ViewChild('scrollMe') container: ElementRef;
+  @ViewChild('container') container: ElementRef;
   @ViewChild('messageInput') messageInput: ElementRef;
 
   @Input() currentUserId = 1;
   @Input() conversation: MessageChat[];
+  @Input() isFullScreen = true;
+
 
   @Output() onSend = new EventEmitter();
 

@@ -10,11 +10,12 @@ import { MessengerModule }  from 'ngx-messenger';
 
 @Component({
   selector: 'app',
-  template: `<msg-chat-box
+  template: `<div id="container"><msg-chat-box
               (onSend)="sendMessage($event)"
+              [isFullScreen]="true"
               [conversation]="conversation"
               [currentUserId]="currentUserId">
-              </msg-chat-box>`
+              </msg-chat-box></div>`
 })
 class AppComponent {
   currentUserId = 1;
