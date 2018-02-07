@@ -23,9 +23,12 @@ export class ContentResizeDirective implements OnInit {
   ngOnInit(): void {
     const topBarBorders = this.getBordersWidthByElement(this.topBar);
     const topBarHeight = this.topBar.offsetHeight + topBarBorders.borderBottom + topBarBorders.borderTop;
+
     const bottomBarBorders = this.getBordersWidthByElement(this.bottomBar);
     const bottomBarHeight = this.bottomBar.offsetHeight + bottomBarBorders.borderBottom + topBarBorders.borderTop;
+
     this._componentSectionsHeight = (topBarHeight + bottomBarHeight) + 2;
+
     if (this.isFullScreen) {
       this.setFullScreenHeight();
     } else {
