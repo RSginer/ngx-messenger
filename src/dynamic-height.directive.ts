@@ -11,7 +11,7 @@ import {
 })
 export class DynamicHeightDirective implements OnInit {
 
-  @Input('dynamicHeight') isFullScreen: boolean;
+  @Input() isFullScreen: boolean;
   @Input() topBar: HTMLElement;
   @Input() bottomBar: HTMLElement;
 

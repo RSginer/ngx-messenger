@@ -1,0 +1,678 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>ngx-messenger</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	    <link rel="stylesheet" href="../styles/style.css">
+                 <link rel="stylesheet" href="../styles/ReadTheDocs.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">ngx-messenger</a>
+            <button type="button" class="btn btn-default btn-menu fa fa-bars" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+            <div id="book-search-input" role="search">
+                <input type="text" placeholder="Type to search">
+            </div>
+            <nav>
+            
+                <ul class="list">
+            
+                    <li class="title">
+                        <a href="../index.html">ngx-messenger</a>
+                    </li>
+            
+                    <li class="divider"></li>
+            
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../index.html"><span class="fa fa-home"></span>Getting started</a>
+                        <ul class="links">
+                                <li class="link">
+                                    <a 
+                                        
+                                         href="../overview.html" 
+                                         href="../overview.html" 
+                                        >
+                                        <span class="fa fa-th"></span>Overview
+                                    </a>
+                                </li>
+                                <li class="link">
+                                  <a href="../index.html" ><span class="fa fa-file-text-o"></span>README</a>
+                                </li>
+                                <li class="link">
+                                        <a href="../license.html"
+                                    >
+                                        <span class="fa fa-file-text-o"></span>LICENSE
+                                    </a>
+                                </li>
+                        </ul>
+                    </li>
+            
+            
+            
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-components-links"
+                            >
+                            <span class="fa fa-cogs"></span>
+                            <span>Components</span>
+                            <span class="fa fa-angle-down"></span>
+                        </div>
+                        <ul class="links collapse "
+                                id="xs-components-links"
+                            >
+                                <li class="link">
+                                    <a href="../components/MessengerChatBoxComponent.html" >MessengerChatBoxComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/MessengerMessageComponent.html"  data-type="entity-link" class="active" >MessengerMessageComponent</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-directives-links"
+                            >
+                            <span class="fa fa-code"></span>
+                            <span>Directives</span>
+                            <span class="fa fa-angle-down"></span>
+                        </div>
+                        <ul class="links collapse "
+                                id="xs-directives-links"
+                            >
+                                <li class="link">
+                                    <a href="../directives/DynamicHeightDirective.html" >DynamicHeightDirective</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+            
+            
+            
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-interfaces-links"
+                            >
+                            <span class="fa fa-info"></span>
+                            <span>Interfaces</span>
+                            <span class="fa fa-angle-down"></span>
+                        </div>
+                        <ul class="links collapse "
+                                id="xs-interfaces-links"
+                            >
+                                <li class="link">
+                                    <a href="../interfaces/MessageChat.html" >MessageChat</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+            
+            
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../coverage.html" ><span class="fa fa-tasks"></span>Documentation coverage</a>
+                    </li>
+            
+            
+                </ul>
+            
+            </nav>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <nav>
+                   
+                       <ul class="list">
+                   
+                           <li class="title">
+                               <a href="../index.html">ngx-messenger</a>
+                           </li>
+                   
+                           <li class="divider"></li>
+                   
+                               <div id="book-search-input" role="search">
+                                   <input type="text" placeholder="Type to search">
+                               </div>
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../index.html"><span class="fa fa-home"></span>Getting started</a>
+                               <ul class="links">
+                                       <li class="link">
+                                           <a 
+                                               
+                                                href="../overview.html" 
+                                                href="../overview.html" 
+                                               >
+                                               <span class="fa fa-th"></span>Overview
+                                           </a>
+                                       </li>
+                                       <li class="link">
+                                         <a href="../index.html" ><span class="fa fa-file-text-o"></span>README</a>
+                                       </li>
+                                       <li class="link">
+                                               <a href="../license.html"
+                                           >
+                                               <span class="fa fa-file-text-o"></span>LICENSE
+                                           </a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                   
+                   
+                           <li class="chapter">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#components-links"
+                   >
+                                   <span class="fa fa-cogs"></span>
+                                   <span>Components</span>
+                                   <span class="fa fa-angle-down"></span>
+                               </div>
+                               <ul class="links collapse "
+                                       id="components-links"
+                   >
+                                       <li class="link">
+                                           <a href="../components/MessengerChatBoxComponent.html" >MessengerChatBoxComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/MessengerMessageComponent.html"  data-type="entity-link" class="active" >MessengerMessageComponent</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                           <li class="chapter">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#directives-links"
+                   >
+                                   <span class="fa fa-code"></span>
+                                   <span>Directives</span>
+                                   <span class="fa fa-angle-down"></span>
+                               </div>
+                               <ul class="links collapse "
+                                       id="directives-links"
+                   >
+                                       <li class="link">
+                                           <a href="../directives/DynamicHeightDirective.html" >DynamicHeightDirective</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                   
+                   
+                   
+                           <li class="chapter">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#interfaces-links"
+                   >
+                                   <span class="fa fa-info"></span>
+                                   <span>Interfaces</span>
+                                   <span class="fa fa-angle-down"></span>
+                               </div>
+                               <ul class="links collapse "
+                                       id="interfaces-links"
+                   >
+                                       <li class="link">
+                                           <a href="../interfaces/MessageChat.html" >MessageChat</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                   
+                   
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../coverage.html" ><span class="fa fa-tasks"></span>Documentation coverage</a>
+                           </li>
+                   
+                   
+                       </ul>
+                   
+                   </nav>
+               </div>
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>MessengerMessageComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+    <li class="active">
+        <a href="#info" id="info-tab" role="tab" data-toggle="tab" data-link="info">Info</a>
+    </li>
+
+    <li>
+        <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+    </li>
+
+    <li>
+        <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+    </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/messenger-message.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>msg-message</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>messenger-message.component.css</code></td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-3">template</td>
+                <td class="col-md-9"><pre class="line-numbers"><code class="language-html">&lt;li [class.left]&#x3D;&quot;position &#x3D;&#x3D;&#x3D; &#x27;left&#x27;&quot; [class.right]&#x3D;&quot;position &#x3D;&#x3D;&#x3D; &#x27;right&#x27;&quot; class&#x3D;&quot;clearfix&quot;&gt;
+    &lt;span
+    [class.float-left]&#x3D;&quot;position &#x3D;&#x3D;&#x3D; &#x27;left&#x27;&quot;
+    [class.float-right]&#x3D;&quot;position &#x3D;&#x3D;&#x3D; &#x27;right&#x27;&quot;
+    class&#x3D;&quot;chat-img&quot;&gt;
+        &lt;img [src]&#x3D;&quot;message?.user?.imageUrl&quot; alt&#x3D;&quot;User Avatar&quot; class&#x3D;&quot;img-circle&quot; /&gt;
+    &lt;/span&gt;
+    &lt;div class&#x3D;&quot;chat-body clearfix&quot;&gt;
+        &lt;div class&#x3D;&quot;header&quot;&gt;
+            &lt;strong
+            class&#x3D;&quot;primary-font&quot;&gt;{{message?.user?.name}}&lt;/strong&gt;
+            &lt;small
+            [class.float-left]&#x3D;&quot;position &#x3D;&#x3D;&#x3D; &#x27;right&#x27;&quot;
+            [class.float-right]&#x3D;&quot;position &#x3D;&#x3D;&#x3D; &#x27;left&#x27;&quot;
+            class&#x3D;&quot;text-muted&quot;&gt;
+                &lt;span class&#x3D;&quot;fa fa-clock-o&quot;&gt;&lt;/span&gt;{{moment(message.date).fromNow()}}&lt;/small&gt;
+        &lt;/div&gt;
+        &lt;p [class.right]&#x3D;&quot;position &#x3D;&#x3D;&#x3D; &#x27;right&#x27;&quot;&gt;
+        {{message?.text}}
+        &lt;/p&gt;
+    &lt;/div&gt;
+&lt;/li&gt;</code></pre></td>
+            </tr>
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+        <h3 id="index">Index</h3>
+        <table class="table table-sm table-bordered index-table">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#moment">moment</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#message">message</a>
+                            </li>
+                            <li>
+                                <a href="#position">position</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h3 id="constructor">Constructor</h3>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>constructor()</code>
+                        </td>
+                    </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">src/messenger-message.component.ts:37</a></div>
+                                </td>
+                            </tr>
+    
+                </tbody>
+            </table>
+    </section>
+
+    <section>
+        <h3 id="inputs">Inputs</h3>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-2">
+                            <a name="message"></a>
+                            <code>message</code>
+                        </td>
+                        <td class="col-md-10">
+                              <p>
+                                <em>Type:</em>    <code><a href="../interfaces/MessageChat.html" target="_self" >MessageChat</a></code>
+
+                              </p>
+                        </td>
+                    </tr>
+                            <tr>
+                                <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/messenger-message.component.ts:35</a></div>
+                                </td>
+                            </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-2">
+                            <a name="position"></a>
+                            <code>position</code>
+                        </td>
+                        <td class="col-md-10">
+                              <p>
+                                <em>Type:</em>    <code>&quot;left&quot; | &quot;right&quot;</code>
+
+                              </p>
+                            <p>
+                              <em>Default value: </em><code>&#x27;right&#x27;</code>
+                            </p>
+                        </td>
+                    </tr>
+                            <tr>
+                                <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/messenger-message.component.ts:36</a></div>
+                                </td>
+                            </tr>
+                </tbody>
+            </table>
+    </section>
+
+
+
+
+    <section>
+        
+            <h3 id="methods">
+                Methods
+            </h3>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="ngOnInit"></a>
+                            <span class="name">
+                                <b>
+                                ngOnInit
+                                </b>
+                                <a href="#ngOnInit"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+    <code>ngOnInit()</code>
+                        </td>
+                    </tr>
+    
+    
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">src/messenger-message.component.ts:41</a></div>
+                                </td>
+                            </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+    
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+    
+                                </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+    </section>
+
+    <section>
+        
+            <h3 id="inputs">
+                Properties
+            </h3>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="moment"></a>
+                            <span class="name">
+                                <b>
+                                moment
+                                </b>
+                                <a href="#moment"><span class="fa fa-link"></span></a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>moment:     <code></code>
+    </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Default value : </i><code>moment</code>
+                            </td>
+                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">src/messenger-message.component.ts:37</a></div>
+                                </td>
+                            </tr>
+    
+    
+                </tbody>
+            </table>
+    </section>
+
+</div>
+
+
+    <div class="tab-pane fade tab-source-code" id="c-source">
+        <pre class="line-numbers"><code class="language-typescript">import { Component, OnInit, Input } from &#x27;@angular/core&#x27;;
+import { MessageChat } from &#x27;./message-chat.interface&#x27;;
+
+import * as moment from &#x27;moment&#x27;;
+
+@Component({
+    selector: &#x27;msg-message&#x27;,
+    styleUrls: [&#x27;messenger-message.component.css&#x27;],
+    template: &#x60;
+    &lt;li [class.left]&#x3D;&quot;position &#x3D;&#x3D;&#x3D; &#x27;left&#x27;&quot; [class.right]&#x3D;&quot;position &#x3D;&#x3D;&#x3D; &#x27;right&#x27;&quot; class&#x3D;&quot;clearfix&quot;&gt;
+        &lt;span
+        [class.float-left]&#x3D;&quot;position &#x3D;&#x3D;&#x3D; &#x27;left&#x27;&quot;
+        [class.float-right]&#x3D;&quot;position &#x3D;&#x3D;&#x3D; &#x27;right&#x27;&quot;
+        class&#x3D;&quot;chat-img&quot;&gt;
+            &lt;img [src]&#x3D;&quot;message?.user?.imageUrl&quot; alt&#x3D;&quot;User Avatar&quot; class&#x3D;&quot;img-circle&quot; /&gt;
+        &lt;/span&gt;
+        &lt;div class&#x3D;&quot;chat-body clearfix&quot;&gt;
+            &lt;div class&#x3D;&quot;header&quot;&gt;
+                &lt;strong
+                class&#x3D;&quot;primary-font&quot;&gt;{{message?.user?.name}}&lt;/strong&gt;
+                &lt;small
+                [class.float-left]&#x3D;&quot;position &#x3D;&#x3D;&#x3D; &#x27;right&#x27;&quot;
+                [class.float-right]&#x3D;&quot;position &#x3D;&#x3D;&#x3D; &#x27;left&#x27;&quot;
+                class&#x3D;&quot;text-muted&quot;&gt;
+                    &lt;span class&#x3D;&quot;fa fa-clock-o&quot;&gt;&lt;/span&gt;{{moment(message.date).fromNow()}}&lt;/small&gt;
+            &lt;/div&gt;
+            &lt;p [class.right]&#x3D;&quot;position &#x3D;&#x3D;&#x3D; &#x27;right&#x27;&quot;&gt;
+            {{message?.text}}
+            &lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;&#x60;
+})
+export class MessengerMessageComponent implements OnInit {
+
+    @Input() message: MessageChat;
+    @Input() position: &#x27;left&#x27; | &#x27;right&#x27; &#x3D; &#x27;right&#x27;;
+    moment &#x3D; moment;
+
+    constructor() { }
+
+    ngOnInit() { }
+}
+</code></pre>
+    </div>
+
+
+    <div class="tab-pane fade" id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><li [class.left]="position === \'left\'" [class.right]="position === \'right\'" class="clearfix">    <span    [class.float-left]="position === \'left\'"    [class.float-right]="position === \'right\'"    class="chat-img">        <img [src]="message?.user?.imageUrl" alt="User Avatar" class="img-circle" />    </span>    <div class="chat-body clearfix">        <div class="header">            <strong            class="primary-font">{{message?.user?.name}}</strong>            <small            [class.float-left]="position === \'right\'"            [class.float-right]="position === \'left\'"            class="text-muted">                <span class="fa fa-clock-o"></span>{{moment(message.date).fromNow()}}</small>        </div>        <p [class.right]="position === \'right\'">        {{message?.text}}        </p>    </div></li></div>'
+    var COMPONENTS = [{'name': 'MessengerChatBoxComponent', 'selector': 'msg-chat-box'},{'name': 'MessengerMessageComponent', 'selector': 'msg-message'}];
+    var DIRECTIVES = [{'name': 'DynamicHeightDirective', 'selector': '[dynamicHeight]'}];
+    var ACTUAL_COMPONENT = {'name': 'MessengerMessageComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+           </div>
+       </div>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script>var COMPODOC_CURRENT_PAGE_DEPTH = 1;</script>
+
+       <script src="../js/search/search.js"></script>
+       <script src="../js/search/lunr.min.js"></script>
+       <script src="../js/search/search-lunr.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+       <script src="../js/search/search_index.js"></script>
+
+    </body>
+</html>

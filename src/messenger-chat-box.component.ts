@@ -22,7 +22,8 @@ import { MessageChat } from './message-chat.interface';
   <div class="card-body"
    #container
    [scrollTop]="scrollHeight"
-   [dynamicHeight]="isFullScreen"
+   dynamicHeight
+   [isFullScreen]="isFullScreen"
    [topBar]="topBar"
    [bottomBar]="bottomBar" >
       <ul class="chat" *ngFor="let message of conversation">

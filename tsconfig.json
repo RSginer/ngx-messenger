@@ -9,6 +9,9 @@
       "dom"
     ],
     "skipLibCheck": true,
-    "types": []
-  }
+    "types": [],
+  },
+  "exclude": [
+    "**/src/playground/index.ts",
+  ]
 }

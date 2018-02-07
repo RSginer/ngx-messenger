@@ -58,6 +58,7 @@ import { MessengerModule }  from 'ngx-messenger';
   selector: 'app',
   template: `<msg-chat-box
               (onSend)="sendMessage($event)"
+              [isFullScreen]="true"
               [conversation]="conversation"
               [currentUserId]="currentUserId">
               </msg-chat-box>`
