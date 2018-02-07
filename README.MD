@@ -41,12 +41,96 @@ export class AppModule { }
 
 Once MessengerModule is imported, you can use its components, directives and pipes in your Angular application:
 
-```xml
-<!-- You can now use ngx-messenger components in app.component.html -->
-<h1>
-  {{title}}
-</h1>
-<msg-chat-box></msg-chat-box>
+```typescript
+// You can now use ngx-messenger in your components
+
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { Component } from '@angular/core';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+
+import { MessengerModule }  from 'ngx-messenger';
+
+@Component({
+  selector: 'app',
+  template: `<msg-chat-box
+              (onSend)="sendMessage($event)"
+              [conversation]="conversation"
+              [currentUserId]="currentUserId">
+              </msg-chat-box>`
+})
+class AppComponent {
+  currentUserId = 1;
+  conversation = [
+    {
+      text: 'Hello good morning',
+      date: new Date(),
+      user: {
+        id: 2,
+        imageUrl: 'http://via.placeholder.com/100x100',
+        name: 'Paco'
+      }
+    },
+    {
+      text: 'Hi!',
+      date: new Date(),
+      user: {
+        id: 1,
+        imageUrl: 'http://via.placeholder.com/100x100',
+        name: 'Ruben'
+      }
+    },
+    {
+      text: 'Hello good morning',
+      date: new Date(),
+      user: {
+        id: 2,
+        imageUrl: 'http://via.placeholder.com/100x100',
+        name: 'Paco'
+      }
+    },
+    {
+      text: 'Hi!',
+      date: new Date(),
+      user: {
+        id: 1,
+        imageUrl: 'http://via.placeholder.com/100x100',
+        name: 'Ruben'
+      }
+    },
+    {
+      text: 'Hello good morning',
+      date: new Date(),
+      user: {
+        id: 2,
+        imageUrl: 'http://via.placeholder.com/100x100',
+        name: 'Paco'
+      }
+    },
+    {
+      text: 'Hi!',
+      date: new Date(),
+      user: {
+        id: 1,
+        imageUrl: 'http://via.placeholder.com/100x100',
+        name: 'Ruben'
+      }
+    }
+  ]
+
+  sendMessage(text) {
+    this.conversation.push({
+      text: text,
+      date: new Date(),
+      user: {
+        id: this.currentUserId,
+        imageUrl: 'http://via.placeholder.com/100x100',
+        name: 'Ruben'
+      }
+    })
+  }
+}
+
 ```
 
 ## Development
