@@ -7,11 +7,11 @@ import {
 } from '@angular/core';
 
 @Directive({
-  selector: '[contentResize]'
+  selector: '[dynamicHeight]'
 })
-export class ContentResizeDirective implements OnInit {
+export class DynamicHeightDirective implements OnInit {
 
-  @Input('contentResize') isFullScreen: boolean;
+  @Input('dynamicHeight') isFullScreen: boolean;
   @Input() topBar: HTMLElement;
   @Input() bottomBar: HTMLElement;
 
