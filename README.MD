@@ -1,4 +1,7 @@
-# ngx-messenger
+# ngx-messenger 
+
+Awesome Angular 5+ UX/UI library for Chats  💬
+
 ## Demo
 <div style="text-align: center">
   <img src="https://rsginer.github.io/ngx-messenger/assets/demo.gif">
