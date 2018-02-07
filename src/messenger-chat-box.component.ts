@@ -23,8 +23,8 @@ import { MessageChat } from './message-chat.interface';
    #container
    [scrollTop]="scrollHeight"
    [contentResize]="isFullScreen"
-   [topBarHeight]="topBar.offsetHeight"
-   [bottomBarHeight]="bottomBar.offsetHeight" >
+   [topBar]="topBar"
+   [bottomBar]="bottomBar" >
       <ul class="chat" *ngFor="let message of conversation">
          <msg-message
          [position]="currentUserId !== message?.user?.id ? 'left' : 'right'"

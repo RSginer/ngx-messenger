@@ -12,8 +12,8 @@ import {
 export class ContentResizeDirective implements OnInit {
 
   @Input('contentResize') isFullScreen: boolean;
-  @Input() topBarHeight: any;
-  @Input() bottomBarHeight: any;
+  @Input() topBar: HTMLElement;
+  @Input() bottomBar: HTMLElement;
 
   private _parentContainerHeight: number;
   private _componentSectionsHeight: number;
@@ -21,7 +21,11 @@ export class ContentResizeDirective implements OnInit {
   constructor(private el: ElementRef) { }
 
   ngOnInit(): void {
-    this._componentSectionsHeight = (this.topBarHeight + this.bottomBarHeight) - 3;
+    const topBarBorders = this.getBordersWidthByElement(this.topBar);
+    const topBarHeight = this.topBar.offsetHeight + topBarBorders.borderBottom + topBarBorders.borderTop;
+    const bottomBarBorders = this.getBordersWidthByElement(this.bottomBar);
+    const bottomBarHeight = this.bottomBar.offsetHeight + bottomBarBorders.borderBottom + topBarBorders.borderTop;
+    this._componentSectionsHeight = (topBarHeight + bottomBarHeight) + 2;
     if (this.isFullScreen) {
       this.setFullScreenHeight();
     } else {
@@ -44,6 +48,13 @@ export class ContentResizeDirective implements OnInit {
 
   setParentHeight() {
     this.el.nativeElement.style.height = (this._parentContainerHeight - this._componentSectionsHeight).toString() + 'px';
+  }
+
+  getBordersWidthByElement(el) {
+    return {
+      borderTop: parseFloat(getComputedStyle(this.topBar).borderTop.split(' ').join('')),
+      borderBottom: parseFloat(getComputedStyle(this.topBar).borderBottom.split(' ').join(''))
+    }
   }
 
 }
