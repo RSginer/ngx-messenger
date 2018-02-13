@@ -9,6 +9,7 @@ import {
 } from '@angular/core';
 
 import { MessageChat } from './message-chat.interface';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'msg-chat-box',
@@ -16,9 +17,10 @@ import { MessageChat } from './message-chat.interface';
   template: `
   <div class="card">
   <div class="card-heading" #topBar id="accordion">
+     <button (click)="goBack()" class="btn btn-default btn--back">
+     <span class="fa fa-chevron-left left"></span></button>
       <span class="fa fa-commenting-o"></span> Chat
   </div>
-
   <div class="card-body"
    #container
    [scrollTop]="scrollHeight"
@@ -33,7 +35,6 @@ import { MessageChat } from './message-chat.interface';
          ></msg-message>
       </ul>
   </div>
-
   <div class="card-footer" #bottomBar>
       <div class="input-group">
           <input #messageInput id="btn-input" type="text" class="form-control input-sm" placeholder="Type your message here..." />
@@ -53,13 +54,12 @@ export class MessengerChatBoxComponent implements OnInit {
   @Input() conversation: MessageChat[];
   @Input() isFullScreen = true;
 
-
   @Output() onSend = new EventEmitter();
+  @Output() onGoBack = new EventEmitter();
 
   scrollHeight;
 
-  constructor() {
-  }
+  constructor(private _location: Location) { }
 
   emitMessage(text) {
     this.onSend.next(text);
@@ -69,6 +69,10 @@ export class MessengerChatBoxComponent implements OnInit {
 
   ngOnInit() {
     this.scrollHeight = this.container.nativeElement.scrollHeight;
+  }
+
+  goBack() {
+      this.onGoBack.next();
   }
 
 }
