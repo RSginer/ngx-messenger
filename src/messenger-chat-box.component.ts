@@ -9,7 +9,6 @@ import {
 } from '@angular/core';
 
 import { MessageChat } from './message-chat.interface';
-import { Location } from '@angular/common';
 
 @Component({
   selector: 'msg-chat-box',
@@ -59,7 +58,7 @@ export class MessengerChatBoxComponent implements OnInit {
 
   scrollHeight;
 
-  constructor(private _location: Location) { }
+  constructor() { }
 
   emitMessage(text) {
     this.onSend.next(text);
