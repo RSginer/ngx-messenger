@@ -25,7 +25,7 @@ export class DynamicHeightDirective implements OnInit {
     const topBarHeight = this.topBar.offsetHeight + topBarBorders.borderBottom + topBarBorders.borderTop;
 
     const bottomBarBorders = this.getBordersWidthByElement(this.bottomBar);
-    const bottomBarHeight = this.bottomBar.offsetHeight + bottomBarBorders.borderBottom + topBarBorders.borderTop;
+    const bottomBarHeight = this.bottomBar.offsetHeight + bottomBarBorders.borderBottom + bottomBarBorders.borderTop;
 
     this._componentSectionsHeight = (topBarHeight + bottomBarHeight);
 
@@ -53,10 +53,10 @@ export class DynamicHeightDirective implements OnInit {
     this.el.nativeElement.style.height = (this._parentContainerHeight - this._componentSectionsHeight).toString() + 'px';
   }
 
-  getBordersWidthByElement(el) {
+  getBordersWidthByElement(el: HTMLElement) {
     return {
-      borderTop: parseFloat(getComputedStyle(this.topBar).borderTop.split(' ').join('')),
-      borderBottom: parseFloat(getComputedStyle(this.topBar).borderBottom.split(' ').join(''))
+      borderTop: parseFloat(getComputedStyle(el).borderTop.split(' ').join('')),
+      borderBottom: parseFloat(getComputedStyle(el).borderBottom.split(' ').join(''))
     }
   }
 
